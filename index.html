@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veloso 🕷</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+    }
+
+    #conteudo {
+      background: linear-gradient(to bottom, #b80101, #130303, #130303, #b80101);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: sans-serif;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    h2 {
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #ffffff;
+      color: rgb(121, 7, 7);
+      border: none;
+      padding: 10px;
+      width: 80px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn-container {
+      margin-bottom: 20px;
+    }
+
+    #nao {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: tremer 0.1s infinite alternate, piscar 1s infinite alternate;
+    }
+
+    /* Animação de tremor */
+    @keyframes tremer {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      25% {
+        transform: translate(-50%, -50%) rotate(5deg);
+      }
+      50% {
+        transform: translate(-50%, -50%) rotate(-5deg);
+      }
+      75% {
+        transform: translate(-50%, -50%) rotate(5deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(-5deg);
+      }
+    }
+
+    /* Animação de piscar */
+    @keyframes piscar {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="conteudo">
+    <h2>Recipe night with cuddles and a massage?</h2>
+
+    <div class="btn-container">
+      <button class="btn" onclick="sim()">SIM😈</button>
+    </div>
+
+    <button class="btn" id="nao" onmouseover="desvia(this)" onclick="desvia(this)">NÃO</button>
+  </div>
+
+  <script>
+    function sim() {
+      alert("Acho bom, esse era o ultimo conivte (agora aperta ai gata)");
+      location.href = "https://madutiam.github.io/fogos/";
+    }
+
+    function desvia(btn) {
+      btn.style.top = geraPosicao(10, 80);
+      btn.style.left = geraPosicao(10, 80);
+    }
+
+    function geraPosicao(min, max) {
+      return (Math.random() * (max - min) + min) + "%";
+    }
+  </script>
+</body>
+</html>
