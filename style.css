@@ -1,0 +1,29 @@
+/* Estilos padrão (para desktop) */
+body {
+    font-size: 16px;
+    margin: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dois itens por linha */
+}
+
+/* Estilos para telas pequenas (por exemplo, celulares) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Um item por linha */
+    }
+}
+
+/* Estilos para telas muito pequenas (como celulares verticais) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
