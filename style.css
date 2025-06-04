@@ -13,7 +13,7 @@ body {
 @media (max-width: 768px) {
     body {
         font-size: 18px;
-        margin: 10px;
+        margin: 12px;
     }
 
     .container {
@@ -24,6 +24,6 @@ body {
 /* Estilos para telas muito pequenas (como celulares verticais) */
 @media (max-width: 480px) {
     body {
-        font-size: 12px;
+        font-size: 18px;
     }
 }
