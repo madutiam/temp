@@ -12,7 +12,7 @@ body {
 /* Estilos para telas pequenas (por exemplo, celulares) */
 @media (max-width: 768px) {
     body {
-        font-size: 14px;
+        font-size: 18px;
         margin: 10px;
     }
 
